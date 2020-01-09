@@ -13,11 +13,14 @@ namespace Decorator
 
             IWeapon weapon = new Ak47();
 
+            Console.WriteLine("Base Ak47 \n");
             Console.WriteLine(weapon.Damage());
             Console.WriteLine(weapon.Heavy());
             Console.WriteLine(weapon.Rpm());
 
-            Console.WriteLine();
+            Console.WriteLine("-----------------\n");
+
+            Console.WriteLine("Ak47 with Silencer\n");
 
             weapon = new Silencer(new Ak47());
 
@@ -25,7 +28,9 @@ namespace Decorator
             Console.WriteLine(weapon.Heavy());
             Console.WriteLine(weapon.Rpm());
 
-            Console.WriteLine();
+            Console.WriteLine("-----------------\n");
+
+            Console.WriteLine("Ak47 with Silencer and HandTaker\n");
 
             weapon = new Silencer(new HandTaker(new Ak47()));
 
